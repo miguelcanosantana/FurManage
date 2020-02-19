@@ -1,2 +1,3 @@
 # FurManage
-CRUD for managing furries of a community.
+CRUD for managing (adding, update and remove) furry fandom members
+on a community, (targeted at groups).
