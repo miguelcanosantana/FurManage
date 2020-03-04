@@ -18,7 +18,7 @@
         
     <!-- Custom -->
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     
     <title>Creating User...</title>
   </head>
@@ -38,23 +38,23 @@
                   
                   <!--Username-->
                   <label for="usrname">Username</label><br>
-                  <input type="text" id="usrname" value=""><br><br>
+                  <input type="text" class="form-control" id="usrname" value=""><br><br>
 
                   <!--Password-->
                   <label for="psswd">Password</label><br>
-                  <input type="password" id="psswd" maxlength="128" value=""><br><br>
+                  <input type="password" class="form-control" id="psswd" maxlength="128" value=""><br><br>
                   
                   <!--Repeat Password-->
                   <label for="rpsswd">Repeat Password</label><br>
-                  <input type="password" id="rpsswd" maxlength="128" value=""><br><br>
+                  <input type="password" class="form-control" id="rpsswd" maxlength="128" value=""><br><br>
                   
-                  <!--Birthday-->
-                  <label for="birthday">Birthday</label><br>
-                  <input type="date" id="birthday" name="birthday"><br><br>
+                  <!--Current Age-->
+                  <label for="birthday">Current Age</label><br>
+                  <input type="number" class="form-control" id="birthday" name="quantity" min="1" max="122"><br><br>
                   
                   <!--Search in List of Genders (User can also write it's own if not in the list)-->
                   <label for="genders">Genders</label><br>
-                  <input list="genders">
+                  <input list="genders" class="form-control">
                   <datalist id="genders">
                     <!-- List of genders Thanks to: https://abcnews.go.com/blogs/headlines/2014/02/heres-a-list-of-58-gender-options-for-facebook-users -->
                     <option value="Agender">
