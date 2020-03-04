@@ -43,7 +43,7 @@
                     <label for="user">Password</label><br>
                     <input type="password" id="psswd" maxlength="128" value=""><br><br>
                     
-                    <input type="button" onclick="window.location.href = 'newuser.jsp';" class="btn btn-light btn-lg" value="New User">
+                    <input type="button" onclick="window.location.href = 'jsp_pages/newuser.jsp';" class="btn btn-light btn-lg" value="New User">
                     <input type="submit" class="btn btn-light btn-lg" value="Login">
                     
                     
