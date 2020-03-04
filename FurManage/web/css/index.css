@@ -1,0 +1,29 @@
+/* 
+    Created on : 2 mar. 2020, 10:08:43
+    Author     : miguel
+
+    This is the css used in Index
+*/
+
+/* ---------------Parts of the Page--------------- */
+
+  body{ background-color: #333333;      
+  }
+  
+
+/* ---------------IDS--------------- */
+
+  #login-body{ overflow-y: hidden;
+  }
+
+  #login-jumbo{ height: 100vh; 
+                background-color: #333333;
+                color: #FFFFFF;
+  }
+
+
+/* ---------------Classes--------------- */
+
+  .btn{ margin-right: 5px;
+        margin-left: 5px;
+  }
