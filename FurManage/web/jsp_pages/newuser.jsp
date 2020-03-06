@@ -34,27 +34,27 @@
               <p>Furry Hub and Community Manager</p>
 
                 <!--Form-->
-                <form form method="post" action="index.jsp">
+                <form form method="post" action="../jsp_processes/recordnewuser.jsp">
                   
                   <!--Username-->
                   <label for="usrname">Username</label><br>
-                  <input type="text" class="form-control" id="usrname" value=""><br><br>
+                  <input type="text" name="usrname" class="form-control" id="usrname" value=""><br><br>
 
                   <!--Password-->
                   <label for="psswd">Password</label><br>
-                  <input type="password" class="form-control" id="psswd" maxlength="128" value=""><br><br>
+                  <input type="password" name="psswd" class="form-control" id="psswd" maxlength="128" value=""><br><br>
                   
                   <!--Repeat Password-->
                   <label for="rpsswd">Repeat Password</label><br>
-                  <input type="password" class="form-control" id="rpsswd" maxlength="128" value=""><br><br>
+                  <input type="password" name="rpsswd" class="form-control" id="rpsswd" maxlength="128" value=""><br><br>
                   
                   <!--Current Age-->
-                  <label for="birthday">Current Age</label><br>
-                  <input type="number" class="form-control" id="birthday" name="quantity" min="1" max="122"><br><br>
+                  <label for="age">Current Age</label><br>
+                  <input type="number" name="age" class="form-control" id="age" name="quantity" min="1" max="122"><br><br>
                   
                   <!--Search in List of Genders (User can also write it's own if not in the list)-->
-                  <label for="genders">Genders</label><br>
-                  <input list="genders" class="form-control">
+                  <label for="genders">Gender (optional)</label><br>
+                  <input list="genders" name="genders" class="form-control">
                   <datalist id="genders">
                     <!-- List of genders Thanks to: https://abcnews.go.com/blogs/headlines/2014/02/heres-a-list-of-58-gender-options-for-facebook-users -->
                     <option value="Agender">
@@ -115,8 +115,45 @@
                     <option value="Two-Spirit">
                   </datalist><br><br>
                   
+                  <!--Country-->
+                  <label for="country">Country (Optional)</label><br>
+                  <input type="text" name="country" class="form-control" id="country" value=""><br><br>
+                  
+                  <!--Has Fursuit-->
+                  <label for="exampleRadios">Has Fursuit</label><br>        
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fursuit" id="exampleRadios1" value=1>
+                    <label class="form-check-label" for="exampleRadios1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fursuit" id="exampleRadios2" value=0>
+                    <label class="form-check-label" for="exampleRadios2">
+                      No
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fursuit" id="exampleRadios3" value=1 checked>
+                    <label class="form-check-label" for="exampleRadios3">
+                      It's a secret!
+                    </label> <br><br>
+                  </div>
+                  
+                  <!--Url of Avatar-->
+                  <label for="avatar">Put here your profile image URL (Optional)</label><br>
+                  <input type="text" name="avatar" class="form-control" id="avatar" value=""><br><br>
+                  
+                  
+                  
+                  
+                  
                   <!--Submit Button!-->
-                  <input type="submit" class="btn btn-light btn-lg" value="Create User">
+                  <input type="button" onclick="window.location.href = '../index.jsp';" class="btn btn-outline-danger btn-lg" value="Go Back">
+                  <input type="submit" class="btn btn-success btn-lg" value="Create User">
+                  
+                
                   
                   
 

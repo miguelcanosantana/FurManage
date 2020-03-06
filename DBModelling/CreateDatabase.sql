@@ -18,17 +18,17 @@ USE `mydb` ;
 -- Table `mydb`.`user`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`user` (
-  `IdUser` INT NOT NULL,
+  `IdUser` INT NOT NULL AUTO_INCREMENT,
   `NameUser` VARCHAR(45) NOT NULL,
   `PasswdUser` VARCHAR(500) NOT NULL,
   `HasAdminUser` TINYINT NOT NULL,
-  `AgeUser` INT(11) NOT NULL,
+  `AgeUser` INT(3) NOT NULL,
   `GenderUser` VARCHAR(45) NULL,
   `ZoneUser` VARCHAR(45) NULL,
-  `FavArtistUser` VARCHAR(45) NULL,
   `HasFursuitUser` TINYINT NULL,
   `ImageUrlUser` VARCHAR(2048) NULL,
-  PRIMARY KEY (`IdUser`))
+  PRIMARY KEY (`IdUser`)
+  UNIQUE (NameUser))
 ENGINE = InnoDB;
 
 
@@ -36,7 +36,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`fursona`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`fursona` (
-  `IdSona` INT NOT NULL,
+  `IdSona` INT NOT NULL AUTO_INCREMENT,
   `OwnedByUserSona` INT NOT NULL,
   `NameSona` VARCHAR(45) NOT NULL,
   `GenderSona` VARCHAR(45) NULL,
@@ -54,7 +54,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`species`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`species` (
-  `IdSpec` INT NOT NULL,
+  `IdSpec` INT NOT NULL AUTO_INCREMENT,
   `NameSpec` VARCHAR(45) NOT NULL,
   `InRealLifeSpec` TINYINT NOT NULL,
   `IsFurrySpec` TINYINT NOT NULL,
@@ -68,7 +68,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`fursona_has_species`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`fursona_has_species` (
-  `AssignmentOfSpeciesID` INT NOT NULL,
+  `AssignmentOfSpeciesID` INT NOT NULL AUTO_INCREMENT,
   `IdSona` INT NOT NULL,
   `IdSpec` INT NOT NULL,
   PRIMARY KEY (`AssignmentOfSpeciesID`),

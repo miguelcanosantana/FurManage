@@ -37,14 +37,14 @@
                 
                   <!--Form-->
                   <form form method="post" action="index.jsp">
-                    <label for="user">Username</label><br>
-                    <input type="text" id="usrname" value=""><br><br>
+                    <label for="usrname">Username</label><br>
+                    <input type="text" class="form-control" id="usrname" value=""><br><br>
                     
-                    <label for="user">Password</label><br>
-                    <input type="password" id="psswd" maxlength="128" value=""><br><br>
+                    <label for="psswd">Password</label><br>
+                    <input type="password" class="form-control" id="psswd" maxlength="128" value=""><br><br>
                     
-                    <input type="button" onclick="window.location.href = 'jsp_pages/newuser.jsp';" class="btn btn-light btn-lg" value="New User">
-                    <input type="submit" class="btn btn-light btn-lg" value="Login">
+                    <input type="button" onclick="window.location.href = 'jsp_pages/newuser.jsp';" class="btn btn-secondary btn-lg" value="New User">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Login">
                     
                     
                     
