@@ -51,11 +51,8 @@
         MessageDigest.isEqual(hash.getBytes(), "3617A2D14296CBC105AABF0EEBF8C74E".getBytes()) + "<br><br>"
         );
       
-      
-      
-      
-
-      //Tries to insert Values, if fails prints error message
+        //Tries to insert Values, if fails redirects to user creation
+        try {
      
           String adduser = "INSERT INTO `user` (`NameUser`, `PasswdUser`, `HasAdminUser`, `AgeUser`, `GenderUser`, `ZoneUser`, `HasFursuitUser`, `ImageUrlUser`) VALUES "
                   + "("   + " '" +request.getParameter("usrname")
@@ -72,7 +69,20 @@
                           //Execute the procedure
                           s.execute(adduser);  
                           //Redirects to login
-                          response.sendRedirect("http://localhost:8080/FurManage/jsp_pages/newuser.jsp");
+                          response.sendRedirect("http://localhost:8080/FurManage/");
+        
+        
+        
+        
+        
+        } catch(Exception e) {
+          response.sendRedirect("http://localhost:8080/FurManage/jsp_pages/newuser.jsp");
+          
+          
+        }
+      
+
+
       
       
         
