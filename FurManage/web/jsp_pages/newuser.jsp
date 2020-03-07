@@ -35,7 +35,6 @@
           <div class="row">
             <div class="col-sm">
               <div id="back-of-jumbo">
-                
                 <!-- Jumbo Image -->
                   <img class="img-fluid title-logo" src="../img/furmanage_logo_FM.png">
                   <p>Furry Hub and Community Manager</p><br><br>
@@ -149,7 +148,7 @@
                     <input type="text" name="country" class="form-control" id="country" value=""><br><br>
 
                     <!--Has Fursuit-->
-                    <label for="exampleRadios">Has Fursuit</label><br>        
+                    <label for="exampleRadios">Do you have Fursuit</label><br>        
 
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="fursuit" id="exampleRadios1" value=1>
@@ -179,18 +178,9 @@
                       If username is taken this page will be reloaded
                     </div><br><br>
 
-
-
-
-
-
                     <!--Submit Button!-->
                     <input type="button" onclick="window.location.href = '../index.jsp';" class="btn btn-outline-danger btn-lg" value="Go Back">
                     <input type="submit" class="btn btn-success btn-lg" value="Create User">
-
-
-
-
 
                   </form>
 
@@ -202,8 +192,6 @@
       </div>
     </div>
   </div>
-    
-
-    
+  
   </body>
 </html>

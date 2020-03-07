@@ -56,7 +56,7 @@
       
 
       //Tries to insert Values, if fails prints error message
-      try{
+     
           String adduser = "INSERT INTO `user` (`NameUser`, `PasswdUser`, `HasAdminUser`, `AgeUser`, `GenderUser`, `ZoneUser`, `HasFursuitUser`, `ImageUrlUser`) VALUES "
                   + "("   + " '" +request.getParameter("usrname")
                           + "', '" + hash
@@ -70,21 +70,12 @@
                           out.print(adduser);
                          
                           //Execute the procedure
-                          s.execute(adduser);          
-                          connection.close();
-                          
-                          out.close();  
-                                         
-                          
-      } catch (Exception e) {
-          System.out.println("An error has ocurred");
-          System.out.println(e);
-        }
+                          s.execute(adduser);  
+                          //Redirects to login
+                          response.sendRedirect("http://localhost:8080/FurManage/jsp_pages/newuser.jsp");
       
-        //Redirect to user creation
-        response.setStatus(301);
-        response.setHeader("Location", "http://localhost:8080/FurManage/jsp_pages/newuser.jsp");
-        response.setHeader("Connection", "close");
+      
+        
     
     %>
     
