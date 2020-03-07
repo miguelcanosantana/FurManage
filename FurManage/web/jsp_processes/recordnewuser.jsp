@@ -76,6 +76,7 @@
         
         
         } catch(Exception e) {
+          //Redirects to create user
           response.sendRedirect("http://localhost:8080/FurManage/jsp_pages/newuser.jsp");
           
           
