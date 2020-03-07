@@ -9,6 +9,10 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%@page import = "java.io.*,java.util.*" %>
+<%-- For Encryption --%>
+<%@page import="javax.xml.bind.DatatypeConverter"%>
+<%@page import="java.security.MessageDigest"%>
+
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -29,12 +33,33 @@
       //For UTF8 characters
       request.setCharacterEncoding("UTF-8");
       
+      // Encryption
+        // Encrypt Method
+        MessageDigest md = MessageDigest.getInstance("MD5");
+
+        // Use psswd
+        md.update(request.getParameter("psswd").getBytes());
+
+        // Create hash from String
+        String hash = DatatypeConverter.printHexBinary(md.digest());
+
+        // Muestra por pantalla el hash
+        out.print("Hash of psswd is: " + hash + "<br><br>");
+
+        // Comprueba si la clave es correcta
+        out.print(
+        MessageDigest.isEqual(hash.getBytes(), "3617A2D14296CBC105AABF0EEBF8C74E".getBytes()) + "<br><br>"
+        );
+      
+      
+      
+      
 
       //Tries to insert Values, if fails prints error message
       try{
           String adduser = "INSERT INTO `user` (`NameUser`, `PasswdUser`, `HasAdminUser`, `AgeUser`, `GenderUser`, `ZoneUser`, `HasFursuitUser`, `ImageUrlUser`) VALUES "
                   + "("   + " '" +request.getParameter("usrname")
-                          + "', '" + request.getParameter("psswd")
+                          + "', '" + hash
                           + "', " + 0
                           + ", " + Integer.valueOf(request.getParameter("age"))
                           + ", '" + request.getParameter("genders")
@@ -49,14 +74,7 @@
                           connection.close();
                           
                           out.close();  
-                          
-                          //Redirect to user creation
-                          response.setStatus(301);
-                          response.setHeader("Location", "http://localhost:8080/FurManage/index.jsp");
-                          response.setHeader("Connection", "close");
-      
-                                
-                          
+                                         
                           
       } catch (Exception e) {
           System.out.println("An error has ocurred");
@@ -67,12 +85,11 @@
         response.setStatus(301);
         response.setHeader("Location", "http://localhost:8080/FurManage/jsp_pages/newuser.jsp");
         response.setHeader("Connection", "close");
-      
-        
-     
-
     
     %>
+    
+    
+    
     
 
   </body>

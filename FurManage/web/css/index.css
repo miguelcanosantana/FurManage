@@ -14,18 +14,25 @@
         background-attachment: fixed;
         background-repeat: repeat;
         background-size: 14vw;
-        back
+
 
   }
   
 
 /* ---------------IDS--------------- */
 
-  #login-container{ margin-top: 26vh;
+  #login-container{ margin-top: 24vh;
+                    
   }
 
-  #login-jumbo{ background-color: #333333;
-                color: #FFFFFF;
+  #login-jumbo{ background-color: rgba(0, 0, 0, 0.75);
+                color: #F9F9F9;
+                border-radius: 60px;
+                backdrop-filter: blur(6px);
+  }
+  
+  #back-of-jumbo{ text-align: center;
+    
   }
 
 
@@ -34,4 +41,9 @@
   .btn{ margin-right: 5px;
         margin-left: 5px;
         margin-bottom: 10px;
+        border-radius: 60px;
+  }
+  
+  .title-logo{ border-radius: 180px;
+    
   }

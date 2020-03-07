@@ -35,8 +35,10 @@
           <div class="row">
             <div class="col-sm">
               <div id="back-of-jumbo">
-                <h1 id="jumbo-title" class="display-4">FurManage</h1>
-                <p>Furry Hub and Community Manager</p><br><br>
+                
+                <!-- Jumbo Image -->
+                  <img class="img-fluid title-logo" src="../img/furmanage_logo_FM.png">
+                  <p>Furry Hub and Community Manager</p><br><br>
 
                   <!-- Form -->
                   <form form method="post" action="../jsp_processes/recordnewuser.jsp">
