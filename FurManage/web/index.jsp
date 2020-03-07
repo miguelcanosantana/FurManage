@@ -24,37 +24,46 @@
     
     </head>
     
-    <body id="login-body" >  
-      
-      <!--Login Screen-->
-      <div id="login-jumbo" class="jumbotron text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <div id="back-of-jumbo">
-                <h1 id="jumbo-title" class="display-4">FurManage</h1>
-                <p>Furry Hub and Community Manager</p>
-                
-                  <!--Form-->
-                  <form form method="post" action="index.jsp">
-                    <label for="usrname">Username</label><br>
-                    <input type="text" class="form-control" id="usrname" value=""><br><br>
-                    
-                    <label for="psswd">Password</label><br>
-                    <input type="password" class="form-control" id="psswd" maxlength="128" value=""><br><br>
-                    
-                    <input type="button" onclick="window.location.href = 'jsp_pages/newuser.jsp';" class="btn btn-secondary btn-lg" value="New User">
-                    <input type="submit" class="btn btn-primary btn-lg" value="Login">
-                    
-                    
-                    
-                  </form>
-              
+    <body>  
+    
+    <!-- Container -->
+    <div class="container" id="login-container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-8 col-xl-6">
+        <!-- Jumbo -->
+        <div id="login-jumbo" class="jumbotron text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div id="back-of-jumbo">
+                  <h1 id="jumbo-title" class="display-4">FurManage</h1>
+                  <p>Furry Hub and Community Manager</p><br><br>
+
+                    <!--Form-->
+                    <form form method="post" action="index.jsp">
+                      <label for="usrname">Username</label><br>
+                      <input type="text" class="form-control" id="usrname" value=""><br>
+
+                      <label for="psswd">Password</label><br>
+                      <input type="password" class="form-control" id="psswd" maxlength="128" value=""><br><br>
+
+                      <input type="button" onclick="window.location.href = 'jsp_pages/newuser.jsp';" class="btn btn-secondary btn-lg" value="New User">
+                      <input type="submit" class="btn btn-primary btn-lg" value="Login">
+
+
+
+                    </form>
+
+                </div>
               </div>
             </div>
           </div>
+        </div>          
         </div>
       </div>
+    </div>
+      
+
         
         
         

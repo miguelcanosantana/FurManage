@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`user` (
   `ZoneUser` VARCHAR(45) NULL,
   `HasFursuitUser` TINYINT NULL,
   `ImageUrlUser` VARCHAR(2048) NULL,
-  PRIMARY KEY (`IdUser`)
+  PRIMARY KEY (`IdUser`),
   UNIQUE (NameUser))
 ENGINE = InnoDB;
 

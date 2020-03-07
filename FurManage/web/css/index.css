@@ -7,13 +7,21 @@
 
 /* ---------------Parts of the Page--------------- */
 
-  body{ background-color: #111111;    
+  body{ background-color: #111111;
+        background-image: url("../img/furmanage_cutlogo.png");
+        background-position-x: center;
+        background-position-y: fixed;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-size: 14vw;
+        back
+
   }
   
 
 /* ---------------IDS--------------- */
 
-  #login-body{ overflow-y: hidden;
+  #login-container{ margin-top: 26vh;
   }
 
   #login-jumbo{ background-color: #333333;
