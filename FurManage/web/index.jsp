@@ -53,12 +53,12 @@
                   <p>Furry Hub and Community Manager</p><br><br>
                   
                     <!-- Form -->
-                    <form form method="post" action="index.jsp">
+                    <form form method="post" action="http://localhost:8080/FurManage/jsp_processes/login.jsp">
                       <label for="usrname">Username</label><br>
-                      <input type="text" class="form-control" id="usrname" value=""><br>
+                      <input type="text" name="usrname" class="form-control" id="usrname" value=""><br>
 
                       <label for="psswd">Password</label><br>
-                      <input type="password" class="form-control" id="psswd" maxlength="128" value=""><br><br>
+                      <input type="password" name="psswd" class="form-control" id="psswd" maxlength="128" value=""><br><br>
 
                       <input type="button" onclick="window.location.href = 'jsp_pages/newuser.jsp';" class="btn btn-secondary btn-lg" value="New User">
                       <input type="submit" class="btn btn-primary btn-lg" value="Login">

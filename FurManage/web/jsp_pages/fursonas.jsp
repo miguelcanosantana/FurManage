@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     
-    <title>FurManage - Users</title>
+    <title>FurManage - Fursonas</title>
   </head>
   <body>
     
@@ -34,7 +34,7 @@
         Connection conect = DriverManager.getConnection("jdbc:mysql://localhost:3306/furmanage","root", "");
         Statement s = conect.createStatement();
 
-        ResultSet listOfResults = s.executeQuery ("SELECT * FROM user");
+        ResultSet listOfResults = s.executeQuery ("SELECT * FROM fursona");
 
         
       %>
@@ -49,18 +49,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp">Users <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp">Users </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:8080/FurManage/jsp_pages/fursonas.jsp">Fursonas</a>
+              <a class="nav-link" href="http://localhost:8080/FurManage/jsp_pages/fursonas.jsp">Fursonas <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">FAQ</a>
             </li>
             
           </ul>
-          <form form method="get" action="mainpage_search.jsp" class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" name="searchText" placeholder="Search User" aria-label="Search">
+          <form form method="get" action="fursona_search.jsp" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" name="searchText" placeholder="Search Fursona" aria-label="Search">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">🔎</button>
           </form>
         </div>

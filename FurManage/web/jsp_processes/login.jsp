@@ -27,8 +27,8 @@
     <%
       //Creates the connection to the database
       Class.forName("com.mysql.jdbc.Driver");
-      Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/furmanage","root", "");
-      Statement s = connection.createStatement();
+      Connection connection2 = DriverManager.getConnection("jdbc:mysql://localhost:3306/furmanage","root", "");
+      Statement s = connection2.createStatement();
       
       //For UTF8 characters
       request.setCharacterEncoding("UTF-8");
@@ -51,30 +51,29 @@
         MessageDigest.isEqual(hash.getBytes(), "3617A2D14296CBC105AABF0EEBF8C74E".getBytes()) + "<br><br>"
         );
       
-        //Tries to insert Values, if fails redirects to user creation
+        //Tries to check password of user, if success send to main page
         try {
-     
-          String adduser = "INSERT INTO `user` (`NameUser`, `PasswdUser`, `HasAdminUser`, `AgeUser`, `GenderUser`, `ZoneUser`, `HasFursuitUser`, `ImageUrlUser`) VALUES "
-                  + "("   + " '" +request.getParameter("usrname")
-                          + "', '" + hash
-                          + "', " + 0
-                          + ", " + Integer.valueOf(request.getParameter("age"))
-                          + ", '" + request.getParameter("genders")
-                          + "', '" + request.getParameter("country")
-                          + "', " + Integer.valueOf(request.getParameter("fursuit"))
-                          + ", '" + request.getParameter("avatar") + "');";
-
-                          out.print(adduser);
-                         
+          
+          String retrievePassword = "SELECT `PasswdUser` FROM `user` WHERE `NameUser` = '" + request.getParameter("usrname") +"';" ;
+          
                           //Execute the procedure
-                          s.execute(adduser);  
+                          boolean obtained = s.execute(retrievePassword); 
+                          
+                          if (hash == retrievePassword){
+                            out.print("OKEY");
+                          } else {
+                            out.print("NO OKEY");
+                          }
+                           out.println();
+                           out.println(obtained);
+                          
                           //Redirects to main page
-                          response.sendRedirect("http://localhost:8080/FurManage/index.jsp");
+                          response.sendRedirect("http://localhost:8080/FurManage/jsp_pages/mainpage.jsp");
         
         
         } catch(Exception e) {
           //Redirects to login user
-          response.sendRedirect("http://localhost:8080/FurManage/index.jsp");
+         // response.sendRedirect("http://localhost:8080/FurManage/");
           
           
         }

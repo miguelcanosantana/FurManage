@@ -1,9 +1,3 @@
-<%-- 
-    Document   : recordnewuser
-    Created on : 05-mar-2020, 9:35:18
-    Author     : migue
---%>
-
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>

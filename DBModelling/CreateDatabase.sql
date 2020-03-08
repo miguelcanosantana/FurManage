@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`fursona` (
   `OwnedByUserSona` INT NOT NULL,
   `NameSona` VARCHAR(45) NOT NULL,
   `GenderSona` VARCHAR(45) NULL,
+  `ImageUrlSona` VARCHAR(2048) NULL,
   PRIMARY KEY (`IdSona`),
   INDEX `fk_fursona_user_idx` (`OwnedByUserSona` ASC),
   CONSTRAINT `fk_fursona_user`
