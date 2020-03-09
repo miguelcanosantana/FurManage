@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     
-    <title>FurManage - Configure</title>
+    <title>FurManage - Options</title>
   </head>
   <body>
     
@@ -33,9 +33,6 @@
         Class.forName("com.mysql.jdbc.Driver");
         Connection conect = DriverManager.getConnection("jdbc:mysql://localhost:3306/furmanage","root", "");
         Statement s = conect.createStatement();
-
-        ResultSet listOfResults = s.executeQuery ("SELECT * FROM user");
-
         
       %>
       <br>
@@ -71,66 +68,61 @@
       
       
     <!-- Options-->
+    <br>
+    <br>
     <div class="container">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-12 col-md-6 col-lg-4">
           
           <!-- Card -->
-            <div class="card" style="width: auto;">
-              <img src="https://shop.petalgarden.com/resize/Shared/images/Product/Teal-silk-rose-petals/s-teal-L.jpg?bw=1000&w=1000&bh=1000&h=1000" class="card-img-top" alt="Paisaje">
+            <div class="card text-white bg-dark" style="width: auto;">
+              <img src="https://raw.githubusercontent.com/miguelcanosantana/FurManage/master/FurManage/web/img/user_logo.png" class="card-img-top" alt="Paisaje">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-light">Go somewhere</a>
+                <h5 class="card-title">Modify User</h5>
+                <p class="card-text">Here you can modify your user after being created.</p>
+                <a href="#" class="btn btn-outline-light">Modify</a>
               </div>
             </div>
             <br>
+   
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          
+          <!-- Card -->
+            <div class="card text-white bg-dark" style="width: auto;">
+              <img src="https://raw.githubusercontent.com/miguelcanosantana/FurManage/master/FurManage/web/img/fur_logo.png" class="card-img-top" alt="Paisaje">
+              <div class="card-body">
+                <h5 class="card-title">Add / Remove Fursonas</h5>
+                <p class="card-text">You can add a fursona and select from species.</p>
+                <a href="#" class="btn btn-outline-light">Remove</a>
+                <a href="#" class="btn btn-outline-light">Add</a>
+
+              </div>
+            </div>
+            <br>          
           
           
         </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
+        <div class="col-12 col-md-6 col-lg-4">
+          
+          <!-- Card -->
+            <div class="card text-white bg-dark" style="width: auto;">
+              <img src="https://raw.githubusercontent.com/miguelcanosantana/FurManage/master/FurManage/web/img/config_logo.png" class="card-img-top" alt="Paisaje">
+              <div class="card-body">
+                <h5 class="card-title">Remove Users</h5>
+                <p class="card-text">If your account has Admin permissions, delete users.</p>
+                <a href="http://localhost:8080/FurManage/jsp_pages/delete_user.jsp" class="btn btn-outline-light">Delete</a>
+              </div>
+            </div>
+            <br>         
+          
+          
+          
+          
+          
         </div>
       </div>
     </div>
-
-        
-        <%
-          
-
-         
-        
-        
-        while (listOfResults.next()) {
-          
-          //Checks if user has fursuits and converts result to emojis
-          int hasFursuitBackup = listOfResults.getInt("HasFursuitUser");
-          String hasFursuit;
-          
-          if (hasFursuitBackup == 1) {
-            hasFursuit = "✔";
-          } else {
-            hasFursuit = "❌";
-          }
-        
-          /*Adds a row to the table
-          out.println("<tr>");
-          out.println("<th scope=\"row\">" + listOfResults.getInt("IdUser") + "</th>");
-          out.println("<td>" + "<img src=\"" + listOfResults.getString("ImageUrlUser") + "\" " + "width=" + "\"" + "50px" + "\" " + "height=" + "\"" + "50px" + "\" " + "</td>");
-          out.println("<td>" + listOfResults.getString("NameUser") +"</td>");
-          out.println("<td>" + listOfResults.getInt("AgeUser") +"</td>");
-          out.println("<td>" + listOfResults.getString("GenderUser") +"</td>");
-          out.println("<td>" + listOfResults.getString("ZoneUser") +"</td>");
-          out.println("<td>" + hasFursuit +"</td>");
-          */
-        }
-        
-
-        
-        %> 
 
   <%
     //Close connection

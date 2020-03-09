@@ -1,13 +1,12 @@
-/* 
-    Created on : 2 mar. 2020, 10:08:43
-    Author     : miguel
-
-    This is the css used in Main Part Of Page
-*/
-
 /* ---------------Parts of the Page--------------- */
 
-  body{ background-color: #111111;    
+  body{ background-color: #111111;
+        background-image: url("../img/furmanage_cutlogo.png");
+        background-position-x: center;
+        background-position-y: fixed;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-size: 14vw;
   }
   
   img { border-radius: 200px;
@@ -32,4 +31,6 @@
     
   }
   
-  
+  .card{ box-shadow: 0px 12px 55px 0px rgba(0,0,0,0.75);
+    
+  }
