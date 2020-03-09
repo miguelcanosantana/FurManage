@@ -85,7 +85,6 @@
           <th scope="col">Name</th>
           <th scope="col">Gender</th>
           <th scope="col">Owned By</th>
-          <th scope="col">Species</th>
 
         </tr>
       </thead>
