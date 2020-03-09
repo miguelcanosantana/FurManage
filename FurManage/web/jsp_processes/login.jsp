@@ -65,6 +65,23 @@
             
             if((listOfResults2.getString("PasswdUser")).equals(hash)){
               out.println("okey");
+              
+              //Signs off past user (deletes it's cookies)
+              Cookie deleteUsername = new Cookie("username", "");
+              Cookie deleteUserhash = new Cookie("userhash", "");
+              deleteUsername.setMaxAge(0);
+              deleteUserhash.setMaxAge(0);
+              response.addCookie(deleteUsername);
+              response.addCookie(deleteUserhash);
+              
+              //Creates cookies for current user
+              Cookie username = new Cookie("username", request.getParameter("usrname"));
+              Cookie userhash = new Cookie("userhash", hash);
+              username.setMaxAge(60 * 60 * 24 * 365 * 10);
+              userhash.setMaxAge(60 * 60 * 24 * 365 * 10);
+              response.addCookie(username);
+              response.addCookie(userhash);
+              
               //Redirects to main page
               response.sendRedirect("http://localhost:8080/FurManage/jsp_pages/mainpage.jsp");
               

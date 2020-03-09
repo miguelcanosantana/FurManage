@@ -55,14 +55,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp"> Users </a>
-            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="http://localhost:8080/FurManage/jsp_pages/fursonas.jsp">Fursonas <span class="sr-only">(current)</span></a>
+              <a href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp" class="btn btn-primary" role="button">Users</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">FAQ</a>
+              <a href="http://localhost:8080/FurManage/jsp_pages/fursonas.jsp" class="btn btn-warning" role="button">Fursonas</a>
+            </li>
+            <li class="nav-item">
+              <a href="http://localhost:8080/FurManage/jsp_pages/control_panel.jsp" class="btn btn-primary" role="button">⚙</a>
             </li>
             
           </ul>

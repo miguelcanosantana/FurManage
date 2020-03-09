@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     
-    <title>FurManage - Users</title>
+    <title>FurManage - Configure</title>
   </head>
   <body>
     
@@ -51,13 +51,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp" class="btn btn-warning" role="button">Users</a>
+              <a href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp" class="btn btn-primary" role="button">Users</a>
             </li>
             <li class="nav-item">
               <a href="http://localhost:8080/FurManage/jsp_pages/fursonas.jsp" class="btn btn-primary" role="button">Fursonas</a>
             </li>
             <li class="nav-item">
-              <a href="http://localhost:8080/FurManage/jsp_pages/control_panel.jsp" class="btn btn-primary" role="button">⚙</a>
+              <a href="http://localhost:8080/FurManage/jsp_pages/control_panel.jsp" class="btn btn-warning" role="button">⚙</a>
             </li>
             
           </ul>
@@ -70,22 +70,37 @@
       </nav>
       
       
-    <!-- List of users -->
-    <table class="table table-dark table-striped">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Avatar</th>
-          <th scope="col">Username</th>
-          <th scope="col">Age</th>
-          <th scope="col">Gender</th>
-          <th scope="col">Country</th>
-          <th scope="col">Fursuit?</th>
-        </tr>
-      </thead>
-      <tbody>
+    <!-- Options-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          
+          <!-- Card -->
+            <div class="card" style="width: auto;">
+              <img src="https://shop.petalgarden.com/resize/Shared/images/Product/Teal-silk-rose-petals/s-teal-L.jpg?bw=1000&w=1000&bh=1000&h=1000" class="card-img-top" alt="Paisaje">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-light">Go somewhere</a>
+              </div>
+            </div>
+            <br>
+          
+          
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+      </div>
+    </div>
+
         
         <%
+          
+
          
         
         
@@ -101,7 +116,7 @@
             hasFursuit = "❌";
           }
         
-          //Adds a row to the table
+          /*Adds a row to the table
           out.println("<tr>");
           out.println("<th scope=\"row\">" + listOfResults.getInt("IdUser") + "</th>");
           out.println("<td>" + "<img src=\"" + listOfResults.getString("ImageUrlUser") + "\" " + "width=" + "\"" + "50px" + "\" " + "height=" + "\"" + "50px" + "\" " + "</td>");
@@ -110,16 +125,13 @@
           out.println("<td>" + listOfResults.getString("GenderUser") +"</td>");
           out.println("<td>" + listOfResults.getString("ZoneUser") +"</td>");
           out.println("<td>" + hasFursuit +"</td>");
-
+          */
         }
         
 
         
         %> 
 
-      </tbody>
-    </table>
-  </body>
   <%
     //Close connection
     conect.close();
