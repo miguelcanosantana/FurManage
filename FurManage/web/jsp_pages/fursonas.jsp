@@ -40,6 +40,7 @@
         Statement u = conect.createStatement();
         ResultSet listOfResults = s.executeQuery ("SELECT * FROM fursona");
         
+        
 
         
       %>
@@ -84,6 +85,7 @@
           <th scope="col">Name</th>
           <th scope="col">Gender</th>
           <th scope="col">Owned By</th>
+          <th scope="col">Species</th>
 
         </tr>
       </thead>
@@ -106,8 +108,11 @@
           
           while (listOfResults2.next()) {
             out.println("<td>" + listOfResults2.getString("NameUser") +"</td>");
+            
           }
+ 
         }
+       
         
 
         
