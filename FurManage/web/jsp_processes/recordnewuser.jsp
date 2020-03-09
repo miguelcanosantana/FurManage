@@ -36,14 +36,6 @@
 
         // Create hash from String
         String hash = DatatypeConverter.printHexBinary(md.digest());
-
-        // Muestra por pantalla el hash
-        out.print("Hash of psswd is: " + hash + "<br><br>");
-
-        // Comprueba si la clave es correcta
-        out.print(
-        MessageDigest.isEqual(hash.getBytes(), "3617A2D14296CBC105AABF0EEBF8C74E".getBytes()) + "<br><br>"
-        );
       
         //Tries to insert Values, if fails redirects to user creation
         try {

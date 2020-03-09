@@ -28,10 +28,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         
     <!-- Custom -->
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/delete.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
         
-    <title>FurManage</title>
+    <title>FurManage - Delete User</title>
     
     </head>
     
@@ -48,20 +48,29 @@
               <div class="col-sm">
                 <div id="back-of-jumbo">
                   
-                  <!-- Jumbo Image -->
-                  <img class="img-fluid title-logo" src="img/furmanage_logo_FM.png">
-                  <p>Furry Hub and Community Manager</p><br><br>
-                  
                     <!-- Form -->
-                    <form form method="post" action="http://localhost:8080/FurManage/jsp_processes/login.jsp">
-                      <label for="usrname">Username</label><br>
+                    <form form method="post" action="http://localhost:8080/FurManage/jsp_processes/deleteusr.jsp">
+                      <label for="usrname">Admin Account</label><br>
                       <input type="text" name="usrname" class="form-control" minlength="4" id="usrname" value=""><br>
 
-                      <label for="psswd">Password</label><br>
-                      <input type="password" name="psswd" class="form-control" minlength="6" maxlength="128" id="psswd" maxlength="128" value=""><br><br>
-
-                      <input type="button" onclick="window.location.href = 'jsp_pages/newuser.jsp';" class="btn btn-secondary btn-lg" value="New User">
-                      <input type="submit" class="btn btn-primary btn-lg" value="Login">
+                      <label for="psswd">Admin Password</label><br>
+                      <input type="password" name="psswd" class="form-control" minlength="6" maxlength="128" id="psswd" maxlength="128" value=""><br>
+                      
+                      <label for="delusr">ID of the User to DELETE</label><br>
+                      <input type="number" name="delusr" class="form-control" id="delusr" value=""><br>
+                      
+                      <!--Message-->
+                      <div class="alert alert-warning" role="alert">
+                        If username does not exist or Admin credentials are wrong, this page will be reloaded
+                      </div><br>
+                      
+                      <!--Message-->
+                      <div class="alert alert-danger" role="alert">
+                        When deleting an User, it's fursonas will be also ERASED from the database
+                      </div><br>
+                      
+                      <input type="button" onclick="window.location.href = 'http://localhost:8080/FurManage/jsp_pages/control_panel.jsp';" class="btn btn-secondary btn-lg" value="Go Back">
+                      <input type="submit" class="btn btn-outline-danger btn-lg" value="Delete">
 
 
 

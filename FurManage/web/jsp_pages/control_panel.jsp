@@ -72,20 +72,21 @@
     <br>
     <div class="container">
       <div class="row">
+        <!--
         <div class="col-12 col-md-6 col-lg-4">
           
-          <!-- Card -->
+            Card
             <div class="card text-white bg-dark" style="width: auto;">
               <img src="https://raw.githubusercontent.com/miguelcanosantana/FurManage/master/FurManage/web/img/user_logo.png" class="card-img-top" alt="Paisaje">
               <div class="card-body">
                 <h5 class="card-title">Modify User</h5>
                 <p class="card-text">Here you can modify your user after being created.</p>
-                <a href="#" class="btn btn-outline-light">Modify</a>
+                <a href="http://localhost:8080/FurManage/jsp_pages/modify_user.jsp" class="btn btn-outline-light">Modify</a>
               </div>
             </div>
             <br>
    
-        </div>
+        </div> -->
         <div class="col-12 col-md-6 col-lg-4">
           
           <!-- Card -->

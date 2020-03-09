@@ -1,0 +1,49 @@
+/* 
+    Created on : 2 mar. 2020, 10:08:43
+    Author     : miguel
+
+    This is the css used in Index
+*/
+
+/* ---------------Parts of the Page--------------- */
+
+  body{ background-color: #111111;
+        background-image: url("../img/furmanage_cutlogo_red.png");
+        background-position-x: center;
+        background-position-y: fixed;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-size: 14vw;
+
+
+  }
+  
+
+/* ---------------IDS--------------- */
+
+  #login-container{ margin-top: 24vh;
+                    
+  }
+
+  #login-jumbo{ background-color: rgba(0, 0, 0, 0.75);
+                color: #F9F9F9;
+                border-radius: 60px;
+                backdrop-filter: blur(6px);
+  }
+  
+  #back-of-jumbo{ text-align: center;
+    
+  }
+
+
+/* ---------------Classes--------------- */
+
+  .btn{ margin-right: 5px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        border-radius: 60px;
+  }
+  
+  .title-logo{ border-radius: 180px;
+    
+  }
