@@ -39,7 +39,7 @@
         //Statement for retrieving usernames by ids
         Statement u = conect.createStatement();
 
-        //Search users
+        //Search fursonas
         ResultSet listOfResults = s.executeQuery ("SELECT * FROM `fursona` "
                 + "WHERE `NameSona` LIKE '" + request.getParameter("searchText") + "%';");
         
