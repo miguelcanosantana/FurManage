@@ -1,5 +1,5 @@
 # FurManage
-CRUD for managing (adding, update and remove) furry fandom members on a community, (targeted at groups).
+CRUD for managing (adding, update and remove) furry fandom members on a community, (targeted at groups) made in JSP.
 
 Users will be able to add themselves. And the manager will be able to modify and delete them.
 
@@ -9,6 +9,8 @@ In this login, the hash of the password is sent to the database. If user inputs 
 
 ### User Creation
 Username must be UNIQUE, which means that it can't be repeated. User ID will be given automatically.
+Some fields are also optional and can receive any data.
+Password fields have a custom javascript that checks both are the same.
 ![Image](https://github.com/miguelcanosantana/FurManage/blob/master/HostedImages/screenshots/2.gif)
 
 ### Users and Fursonas pages
