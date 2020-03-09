@@ -38,7 +38,7 @@
 
         
       %>
-    
+      <br>
       <br>
       <br>
       <!-- NavBar (with users search) -->

@@ -40,7 +40,7 @@
 
         
       %>
-    
+      <br>
       <br>
       <br>
       <!-- NavBar (Go back) -->
