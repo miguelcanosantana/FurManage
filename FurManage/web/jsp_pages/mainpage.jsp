@@ -39,8 +39,10 @@
         
       %>
     
+      <br>
+      <br>
       <!-- NavBar (with users search) -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <img src="../img/favicon.ico">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -63,6 +65,7 @@
             <input class="form-control mr-sm-2" type="search" name="searchText" placeholder="Search User" aria-label="Search">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">🔎</button>
           </form>
+          <a href="http://localhost:8080/FurManage/index.jsp" class="btn btn-danger" role="button">Close Session</a>
         </div>
       </nav>
       

@@ -41,8 +41,10 @@
         
       %>
     
+      <br>
+      <br>
       <!-- NavBar (Go back) -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <img src="../img/favicon.ico">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -53,9 +55,8 @@
             <li class="nav-item active">
               <a href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp" class="btn btn-danger" role="button">Go Back to Users List</a>
             </li>
-            
           </ul>
-
+          <a href="http://localhost:8080/FurManage/index.jsp" class="btn btn-danger" role="button">Close Session</a>
         </div>
       </nav>
       
@@ -94,7 +95,7 @@
           //Adds a row to the table
           out.println("<tr>");
           out.println("<th scope=\"row\">" + listOfResults.getInt("IdUser") + "</th>");
-          out.println("<td>" + "<img src=\"" + listOfResults.getString("ImageUrlUser") + "\" " + "width=" + "\"" + "50px" + "\" " + "height=" + "\"" + "50px" + "\" " + "</td>");
+          out.println("<td>" + "<img src=\"" + listOfResults.getString("ImageUrlUser") + "\" " + "width=" + "\"" + "100px" + "\" " + "height=" + "\"" + "100px" + "\" " + "</td>");
           out.println("<td>" + listOfResults.getString("NameUser") +"</td>");
           out.println("<td>" + listOfResults.getInt("AgeUser") +"</td>");
           out.println("<td>" + listOfResults.getString("GenderUser") +"</td>");

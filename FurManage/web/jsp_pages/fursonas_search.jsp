@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     
-    <title>FurManage - Fursona Search</title>
+    <title>FurManage - Fursonas Search</title>
   </head>
   <body>
     
@@ -32,17 +32,26 @@
         
         Class.forName("com.mysql.jdbc.Driver");
         Connection conect = DriverManager.getConnection("jdbc:mysql://localhost:3306/furmanage","root", "");
+        
+        //Statement for retrieving fursonas
         Statement s = conect.createStatement();
+        
+        //Statement for retrieving usernames by ids
+        Statement u = conect.createStatement();
 
         //Search users
         ResultSet listOfResults = s.executeQuery ("SELECT * FROM `fursona` "
                 + "WHERE `NameSona` LIKE '" + request.getParameter("searchText") + "%';");
+        
+
 
         
       %>
     
+      <br>
+      <br>
       <!-- NavBar (Go back) -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <img src="../img/favicon.ico">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -51,11 +60,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a href="http://localhost:8080/FurManage/jsp_pages/mainpage.jsp" class="btn btn-danger" role="button">Go Back to Users List</a>
+              <a href="http://localhost:8080/FurManage/jsp_pages/fursonas.jsp" class="btn btn-danger" role="button">Go Back to Fursonas List</a>
             </li>
-            
           </ul>
-
+          <a href="http://localhost:8080/FurManage/index.jsp" class="btn btn-danger" role="button">Close Session</a>
         </div>
       </nav>
       
@@ -65,45 +73,34 @@
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Avatar</th>
-          <th scope="col">Username</th>
-          <th scope="col">Age</th>
+          <th scope="col">Photo</th>
+          <th scope="col">Name</th>
           <th scope="col">Gender</th>
-          <th scope="col">Country</th>
-          <th scope="col">Fursuit?</th>
+          <th scope="col">Owned By</th>
         </tr>
       </thead>
       <tbody>
         
         <%
          
-        
-        
         while (listOfResults.next()) {
           
-          //Checks if user has fursuits and converts result to emojis
-          int hasFursuitBackup = listOfResults.getInt("HasFursuitUser");
-          String hasFursuit;
-          
-          if (hasFursuitBackup == 1) {
-            hasFursuit = "✔";
-          } else {
-            hasFursuit = "❌";
-          }
-        
           //Adds a row to the table
           out.println("<tr>");
-          out.println("<th scope=\"row\">" + listOfResults.getInt("IdUser") + "</th>");
-          out.println("<td>" + "<img src=\"" + listOfResults.getString("ImageUrlUser") + "\" " + "width=" + "\"" + "50px" + "\" " + "height=" + "\"" + "50px" + "\" " + "</td>");
-          out.println("<td>" + listOfResults.getString("NameUser") +"</td>");
-          out.println("<td>" + listOfResults.getInt("AgeUser") +"</td>");
-          out.println("<td>" + listOfResults.getString("GenderUser") +"</td>");
-          out.println("<td>" + listOfResults.getString("ZoneUser") +"</td>");
-          out.println("<td>" + hasFursuit +"</td>");
-
+          out.println("<th scope=\"row\">" + listOfResults.getInt("IdSona") + "</th>");
+          out.println("<td>" + "<img src=\"" + listOfResults.getString("ImageUrlSona") + "\" " + "width=" + "\"" + "200px" + "\" " + "height=" + "\"" + "200px" + "\" " + "</td>");
+          out.println("<td>" + listOfResults.getString("NameSona") +"</td>");
+          out.println("<td>" + listOfResults.getString("GenderSona") +"</td>");
+          
+          //Displays the Username instead the ID
+          int ownedBy = listOfResults.getInt("OwnedByUserSona");     
+          ResultSet listOfResults2 = u.executeQuery ("SELECT NameUser FROM user WHERE IdUser =" + ownedBy + ";");
+          
+          while (listOfResults2.next()) {
+            out.println("<td>" + listOfResults2.getString("NameUser") +"</td>");
+          }
         }
         
-
         
         %> 
 

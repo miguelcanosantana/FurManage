@@ -51,4 +51,5 @@ INSERT INTO `species` (`IdSpec`, `NameSpec`, `InRealLifeSpec`, `IsFurrySpec`, `I
     (33, 'Bird', 1, 0, 0, 1),
     (34, 'Insect', 1, 0, 0, 1),
     (35, 'Shark', 1, 0, 0, 1),
-    (36, 'Bat', 1, 1, 0, 1);
+    (36, 'Bat', 1, 1, 0, 1),
+    (37, 'Hyena', 1, 1, 0, 0);
