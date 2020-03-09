@@ -14,6 +14,7 @@ Username must be UNIQUE, which means that it can't be repeated. User ID will be 
 ### Users and Fursonas pages
 The main users page contains a table listing all the users.
 The fursonas pages also contains a list, of characters made by people. You can see the owner name.
+Use the upper search bar to look for users or fursonas (depending on wich section of the page you are in).
 ![Image](https://github.com/miguelcanosantana/FurManage/blob/master/HostedImages/screenshots/3.gif)
 
 ### Control panel
